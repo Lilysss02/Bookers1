@@ -1,0 +1,23 @@
+<div class="show">
+
+<% if flash[:create] %>
+    <div class="flash">
+    	<%= flash[:create] %>
+    </div>
+<% end %>
+
+<% if flash[:update] %>
+    <div class="flash">
+    	<%= flash[:update] %>
+    </div>
+<% end %>
+
+	<div class="show-content">
+		<p><strong>Title: </strong><%= @blog.title %></p>
+		<p><strong>Body: </strong><%= @blog.body %></p>
+	</div>
+
+	<div class="show-link">
+		<%=link_to "Edit", edit_blog_path(@blog), class: "edit_#{@blog.id}" %> | <%=link_to "Back", blogs_path, class: "back" %>
+	</div>
+</div>

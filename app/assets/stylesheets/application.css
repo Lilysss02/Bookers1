@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333333;
+}
+
+.flash {
+	color: green;
+	font-size: 13px;
+	margin: 30px 45px;
+}
+
+.top {
+	margin: 30px;
+}
+.top-title {
+ 	font-family: 'arial black';
+}
+.top p {
+	font-size: 13px;
+	margin: 30px;
+}
+
+.index {
+	margin: 30px;
+}
+.books-title {
+	margin-bottom: 15px;
+	font-family: 'arial black'
+}
+.books-table {
+	margin-bottom: 25px;
+}
+.books-table th {
+	font-size: 12px;
+}
+.books-table td {
+	font-size: 13px;
+	padding-right: 10px;
+}
+.title-field {
+	width: 170px;
+}
+.body-area {
+	width: 400px;
+}
+
+.newbook-title {
+	font-family: 'arial black';
+	margin-bottom: 13px;
+}
+
+.show {
+	margin: 30px;
+	font-size: 13px;
+}
+.show-content {
+	margin: 0 45px;
+}
+.show-content p {
+	padding-bottom: 30px;
+}
+
+.edit {
+	margin: 30px 30px 15px;
+}
+.edit-title {
+	font-family: 'arial black';
+	margin-bottom: 13px;
+}
+.edit-link {
+	margin-top: 7px;
+	font-size: 13px;
+}

@@ -1,0 +1,47 @@
+<div class="index">
+    <% if flash[:destroy] %>
+    <div class="flash">
+        <%= flash[:destroy] %>
+    </div>
+    <% end %>
+
+    <h2 class="books-title">Books</h2>
+
+    <div class="books-table">
+        <table>
+            <thead>
+                <tr>
+                    <th class="title-field">Title</th>
+                    <th class="body-area">Body</th>
+                </tr>
+            </thead>
+
+            <% @blogs.each do |blog| %>
+            <tbody>
+                <tr>
+                    <td class="title-field"><%= blog.title %></td>
+                    <td class="body-area"><%= blog.body %></td>
+                    <td><%= link_to "Show", blog_path(blog.id), class: "show_#{blog.id}" %></td>
+                    <td><%= link_to "Edit", edit_blog_path(blog.id), class: "edit_#{blog.id}" %></td>
+                    <td><%= link_to "Destroy", blog_path(blog.id), class: "destroy_#{blog.id}", method: :delete, "data-confirm" => "Are you sure?" %></td>
+                </tr>
+            </tbody>
+            <% end %>
+        </table>
+    </div>
+
+    <div class="newbook">
+        <h3 class="newbook-title">New book</h3>
+
+        <%= form_for(@blog) do |f| %>
+
+        <h5>Title</h5>
+        <%= f.text_field :title, class: "book_title" %>
+
+        <h5>Body</h5>
+        <%= f.text_area :body, class: "book_body" %><br>
+
+        <%= f.submit 'Create Book' %>
+        <% end %>
+    </div>
+</div>
